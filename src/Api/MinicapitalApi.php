@@ -75,7 +75,7 @@ class MinicapitalApi implements ApiInterface
         $model = new ItemModel(Input::get('path'));
         Log::info('opening folder "' . $model->getAbsolutePath() . '"');
         
-        if ($model->getAbsolutePath() =='/')
+        if ($model->getAbsolutePath() =='minicapital:/')
 		{
 			$url = 'https://my.minicapital.net/json.php/files/get/0';
 		}
