@@ -445,7 +445,7 @@ class Storage extends BaseStorage implements StorageInterface
             $bytesStart = $offset;
             $bytesEnd = $offset + $bytesRead - 1;
             $context = stream_context_create([
-                's3' => [
+                'minicapital' => [
                     'seekable' => true,
                     'Range' => "bytes={$bytesStart}-{$bytesEnd}",
                 ]

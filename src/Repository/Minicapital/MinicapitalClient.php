@@ -23,7 +23,7 @@ class MinicapitalClient {
      */
     public function __construct($config = [])
     {
-        print_r($config);
+        //print_r($config);
     }
     //put your code here
 }

@@ -255,7 +255,7 @@ class UploadHandler extends BaseUploadHandler
                 fopen($filename, 'r'),
                 $append_file ? FILE_APPEND : 0,
                 stream_context_create([
-                    's3' => array_merge($acl_params, [
+                    'minicapital' => array_merge($acl_params, [
                         // multipart upload note:
                         // it's possible to define mime type only for the first chunk of a file, but each consecutive
                         // chunk that appended overrides object's ContentType to the S3 default "binary/octet-stream".
@@ -297,7 +297,7 @@ class UploadHandler extends BaseUploadHandler
      */
     public function get_file_size($file_path, $clear_stat_cache = false)
     {
-        if(substr($file_path, 0, 5) === 's3://') {
+        if(substr($file_path, 0, 5) === 'minicapital://') {
             // for s3 object path
             // you could use this approach only with AWS SDK version >= 3.18.0
             // @see https://github.com/aws/aws-sdk-php/issues/963 for details
