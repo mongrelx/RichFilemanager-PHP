@@ -81,7 +81,7 @@ class MinicapitalApi implements ApiInterface
 		}
 		else
 		{
-			$url = 'https://my.minicapital.net/json.php/files/get/'.$target_path;
+			$url = 'https://my.minicapital.net/json.php/files/get/'.$model->getRelativePath();
 		}
                 
                 $arrContextOptions=array(
