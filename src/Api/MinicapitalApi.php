@@ -247,6 +247,7 @@ class MinicapitalApi implements ApiInterface
         $targetName = Input::get('name');
 
         $modelTarget = new ItemModel($targetPath);
+        Log::info('adding folder to "' . $targetPath . '"');
         $modelTarget->checkPath();
         $modelTarget->checkWritePermission();
 
