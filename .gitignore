@@ -1,4 +1,1 @@
-.DS_Store
-.idea
-composer.lock
-/vendor
+-e "vendor\ncomposer.lock"  
