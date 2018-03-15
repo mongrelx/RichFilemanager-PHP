@@ -23,7 +23,7 @@ class MinicapitalApi implements ApiInterface
      */
     public function __construct()
     {
-        $this->storage = app()->getStorage(BaseStorage::STORAGE_S3_NAME);
+        $this->storage = app()->getStorage(BaseStorage::STORAGE_MINICAPITAL_NAME);
     }
 
     /**
