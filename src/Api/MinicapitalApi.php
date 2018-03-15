@@ -6,7 +6,7 @@ use RFM\Facade\Input;
 use RFM\Facade\Log;
 use RFM\Event\Api as ApiEvent;
 use RFM\Repository\BaseStorage;
-use RFM\Repository\S3\ItemModel;
+use RFM\Repository\Minicapital\ItemModel;
 use function RFM\app;
 use function RFM\request;
 use function RFM\dispatcher;
