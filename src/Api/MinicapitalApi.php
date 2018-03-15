@@ -74,6 +74,24 @@ class MinicapitalApi implements ApiInterface
         $responseData = [];
         $model = new ItemModel(Input::get('path'));
         Log::info('opening folder "' . $model->getAbsolutePath() . '"');
+        
+        if ($model->getAbsolutePath() =='/')
+		{
+			$url = 'https://my.minicapital.net/json.php/files/get/0';
+		}
+		else
+		{
+			$url = 'https://my.minicapital.net/json.php/files/get/'.$target_path;
+		}
+                
+                $arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+		$response_data = json_decode(file_get_contents($url,false,stream_context_create($arrContextOptions)), true );				
+		return $response_data;
 
         $model->checkPath();
         $model->checkReadPermission();

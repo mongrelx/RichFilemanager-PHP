@@ -60,7 +60,7 @@ class Storage extends BaseStorage implements StorageInterface
         $this->setConfig($config);
         $this->setMinicapitalClient();
 
-        $this->setDynamicRoot('userfiles');
+        $this->setDynamicRoot('/');
         $this->storageRoot = $this->getMinicapitalWrapperPath($this->getDynamicRoot());
     }
 
